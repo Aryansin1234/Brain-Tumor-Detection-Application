@@ -48,13 +48,28 @@ Ensure you have the following installed on your local machine:
    cd brain-tumor-detection-flask-app
    ```
 
-2. **Set Up AWS Credentials**
+## AWS Credentials Configuration
 
-   Ensure that your AWS credentials are correctly configured. You can set them up by running:
+Before running Terraform, you need to configure your AWS credentials so that Terraform can access your AWS account to provision resources.
+
+1. **Configure AWS Credentials**
+
+   AWS credentials can be set up using the AWS CLI. Run the following command and enter your AWS Access Key ID, Secret Access Key, region, and output format when prompted:
 
    ```bash
    aws configure
    ```
+
+   Alternatively, you can set up the credentials manually by creating a file at `~/.aws/credentials` (Linux & Mac) or `%USERPROFILE%\.aws\credentials` (Windows) with the following content:
+
+   ```
+   [default]
+   aws_access_key_id = YOUR_ACCESS_KEY_ID
+   aws_secret_access_key = YOUR_SECRET_ACCESS_KEY
+   region = YOUR_AWS_REGION
+   ```
+
+   Replace `YOUR_ACCESS_KEY_ID`, `YOUR_SECRET_ACCESS_KEY`, and `YOUR_AWS_REGION` with your actual AWS credentials and preferred region.
 
 ## Setup
 
